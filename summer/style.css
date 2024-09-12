@@ -1,0 +1,343 @@
+
+
+body{
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 15px;
+	border-top:10px solid #79a1b1;
+}
+
+
+
+/* CSSコード */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background: #fff;
+}
+header video{
+	object-fit: cover;
+	object-position: center top;
+	opacity:  var(--video-opacity);
+	width: 100vw;
+	height: 90vh;
+}
+header {
+    position: fixed; /*** ← fixedで固定 ***/
+    width: 100%; 
+    height: 60px; 
+    background: #CCC; 
+    padding: 20px 60px; 
+    box-sizing: border-box;
+    top: 0; 
+    left: 0; 
+    display: flex; 
+	align-items: center; }
+
+.logo {
+  font-size: 24px;
+}
+
+/* ここから下がハンバーガーメニューに関するCSS */
+  
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;/* 重なり順を一番上にする */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+  
+/* メニューのデザイン*/
+.nav_content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%; /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: #fff;
+  transition: .5s;
+}
+
+/* メニュー黒ポチを消す */
+.nav_list {
+  list-style: none;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+  left: 0;/* メニューを画面に入れる */
+}
+.main {
+	font-size: 100px;
+    font-family:Georgia, "Times New Roman", Times, "serif";
+
+}
+
+.RIKE{
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+	a{
+		text-decoration: none;
+		color: #333;
+		
+	
+	}
+.ttl{
+	font-size: 30px;
+}
+
+.w_inner{
+	width: 1200px;
+	margin: 0 auto;
+			
+}
+.header ul{
+	display: flex;
+	margin-bottom: 30px
+	
+}
+ul{
+	padding-left: 0;
+}
+li{
+	list-style: none;
+}
+.header ul li{
+	width: 200px;
+	text-align: center;
+}
+header ul li a{
+	display: block;
+}
+.jj{
+	text-align: center;
+	font-size: 24px;
+}
+.gird{
+	display: grid;
+	width: 94vw;
+	margin: 0 auto 3vw;
+	gap: 2vw;
+	
+}
+.gird{
+	width:  94vw;
+	margin: 0 auto 3rem;
+	display: grid;
+	gap: 2vw;
+	gird-template-colums: 46vw 46vw;
+	gird-template-rows: 46vw 46vw 46vw 46vw 46vw 46vw 46vw 46vw ;
+}
+
+.container_service .service_block{
+	display: flex;
+	justify-content: space-between;
+	margin-top:5px;
+margin-right:10px;
+margin-bottom:15px;
+margin-left:20px;
+
+}
+.container_service.service{
+	width: 380px;
+	
+}
+.container_service h2{
+	text-align: center;
+	font-weight: bold;
+	font-size: 24px;	
+}
+.container_service{
+	background-color: bisque;
+	height: 900px;	
+}
+.container_service .service img{
+	margin-bottom: 20px;	
+}
+.container_service.service.ttl{
+	font-weight: bold;
+	font-size: 18px;
+}
+.container_service.service.ttl.explain{
+	margin-bottom: 20px;
+}
+.container_service .service a{
+	background: #78B6D6;
+	color: #fff;
+	padding: 20px 20px 20px;
+	margin-top: 20px;
+	height: 250px;
+	
+}
+
+.box1 {
+	background:#FFFFFF; /*背景色の指定*/
+border:#FFFFFF 1px solid; /*境界線の指定*/
+border-radius: 6px; /*角丸の指定*/
+padding:10px;
+	
+
+}
+.box1 {
+margin:0;
+padding:0;
+}
+.box2 {
+	background:#FFFFFF; /*背景色の指定*/
+border:#FFFFFF 1px solid; /*境界線の指定*/
+border-radius: 6px; /*角丸の指定*/
+padding:10px;
+	
+
+}
+.box2 {
+margin:0;
+padding:0;
+}
+.box3 {
+	background:#FFFFFF; /*背景色の指定*/
+border:#FFFFFF 1px solid; /*境界線の指定*/
+border-radius: 6px; /*角丸の指定*/
+padding:10px;
+	
+
+}
+.box3 {
+margin:0;
+padding:0;
+}
+.ttl{
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom:40px; 
+}
+.explain{
+	margin-bottom: auto
+}
+.footer{
+	margin-top: 40px;
+}
+.pp_link{
+	text-align: right;
+}
+
+
+.content {
+  width: 300px;
+  height: 300px;
+}
+.content:nth-child(1) {
+  background-color: tomato;
+}
+.content:nth-child(2) {
+  background-color: orange;
+}
+.content:nth-child(3) {
+  background-color: blue;
+}
+.content:nth-child(4) {
+  background-color: green;
+}
+.slideshow {
+  display: flex;
+}
+.wrap {
+  display: flex;
+  align-items: center;
+　height: 340px;
+　overflow: hidden;
+}
+.slideshow {
+  display: flex;
+  animation: loop-slide 20s infinite linear 1s both;
+}
+@keyframes loop-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.slide-paused:hover .slideshow {
+  animation-play-state: paused;
+}
+.content-hover {
+  transition: all 0.2s;
+}
+.content-hover:hover {
+  transform: translateY(-20px);
+  border-radius: 0 10%;
+  box-shadow: 0 3px 10px 0 #333;
+  opacity: 0.8;
+  cursor: pointer;
+}
+aa bb cc{
+	margin-top: 40px
+}
+.explain{
+	margin-bottom: 40px
+		
+}
+.service{
+	text-align: center;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+
+
